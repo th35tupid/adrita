@@ -1,28 +1,40 @@
+@font-face
+{
+	font-family: chakra;
+	src: url('./chakra.ttf');
+}
 .wrapper {
   height: 100vh;
-  /*This part is important for centering*/
-  display: grid;
-  place-items: center;
+  position: relative;
+  text-align: center;
 }
 
 .typing-demo {
-  width: 33ch;
+  width: 14.5ch;
+  font-family: chakra; 
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
   font-size: 2em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: yellow;
 }
-
+#age
+{
+  color: red !important;
+}
 @keyframes typing {
   from {
-    width: 0
+    width: 0;
   }
 }
     
 @keyframes blink {
   50% {
-    border-color: transparent
+    border-color: transparent;
   }
 }
